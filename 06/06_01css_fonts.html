@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS_글꼴</title>
+        <style>
+            /* 사용자로 하여금 폰트를 다운받게하여 사용 */
+            @import url(@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+            .ng-font {
+                font-family: 'Nanum Gothic', 돋움;
+            }
+            /* 사용자의 시스템에 설치 된 폰트 사용 */
+            /* p {
+                font-family:굴림, 돋움; <!-- 사용자 pc에 굴림체가 없을경우 돋움으로 출력 -->
+            } */
+
+            h1.fsize {
+                font-size:3em;
+            }
+            p.fsize {
+                font-size:1em;
+            }
+
+            p.accent {
+                font-variant:small-caps; /* 작은 대문자 */
+                font-weight:bold; /* 굵게 */
+            }
+
+            p.italic {
+                font-style:italic;
+            }
+
+            p.txt {
+                font: italic 12px/24px 돋움;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>글꼴 font-family</h1>
+        <p>"이종호" 굴림체 일반 폰트</p>
+        <p class="ng-font">"이종호" 나눔 고딕 웹 폰트</p>
+        <hr>
+        <h1>글자 크기 font-size</h1>
+        <p class="fsize">1em의 크기를 가진 p</p>
+        <h1 class="fsize">3em의 크기를 가진 h1</h1>
+        <hr>
+        <h1>글자 굵기 font-weight 와 작은 대문자 font-variant</h1>
+        <p class="accent">"lee jong ho" 작고 굵은 대문자</p>
+        <hr>
+        <h1>글자 스타일 font-style</h1>
+        <p class="italic">이탤릭 체</p>
+        <hr>
+        <h1>한번에 표현하기1 font:</h1>
+        <p class="txt">돋움체 12px크기 24px줄간격의</p>
+        <p class="txt">이탤릭체</p>
+        <hr>
+        <h1>한번에 표현하기2 font:caption 등</h1>
+        <h2>다 같아보이는건 기분탓이겠지. 아무튼 다름</h2>
+        <p style="font:caption">캡션에 어울리는 스타일 font:caption</p>
+        <p style="font:icon">아이콘에 어울리는 스타일 font:icon</p>
+        <p style="font:menu">드롭다운 메뉴에 어울리는 스타일 font:menu</p>
+        <p style="font:message-box">대화상자에 어울리는 스타일 font:message-box</p>
+        <p style="font:small-caption">작은 캡션에 어울리는 스타일 font:small-caption</p>
+        <p style="font:status-bar">상태 표시줄에 어울리는 글꼴 스타일 font:status-bar</p>
+    </body>
+</html>
