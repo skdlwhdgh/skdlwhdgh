@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>인풋 타입</title>
+    </head>
+    <body>
+        <!-- hidden -->
+        <label>히든<input type="hidden" name="이름" value="서버로 넘길 값"></label><br>
+        <fieldset>
+            <legend>연습장(텍스트 필드 형태)</legend>
+            <!-- text -->
+            <label>텍스트<input type="text" name="텍스트"></label><br>
+            <!-- password -->
+            <label>비번<input type="password" name="비번"></label><br>
+            <!-- search -->
+            <label>Search<input type="search" name="검색"></label>x표시 존재<br>
+            <!-- url -->
+            <label>url<input type="url" name="주소">모바일에서 자동으로 키보드 변경</label><br>
+            <!-- email -->
+            <label>email<input type="email" name="메일">메일 주소 형식인지 브라우저가 자동으로 체크</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>연습장(특이 형태)</legend>
+            <ul>
+            <!-- number -->
+            <li>
+                <label>number<input type="number" min="1" max="5" value="1" name="숫자">브라우저에 따라 스핀박스 표시</label><br>
+            </li>
+            <!-- range -->
+            <li>
+                <label>range<input type="range" min="1" max="5" value="1" name="숫자2"></label><br>
+            </li>
+            <!-- coloe -->
+            <li>
+                <label>color<input type="color" value="#00ff00"></label><br>
+            </li>
+            <!-- date | month | week -->
+            <li>
+                <label>date<input type="date"></label>
+            </li>
+            <li>
+                <label>month<input type="month"></label>
+            </li>
+            <li>
+                <label>week<input type="week"></label>
+            </li>
+            <li>
+                <label>datetime-local<input type="datetime-local"></label>
+            </li>
+            <li>
+                <label>시작시간<input type="time" value="09:00" id="start"></label>,
+                <label>종료시간<input type="time" value="18:00" id="end"></label><br>
+
+                <label>시작시간<input type="datetime-local" value="2018-01-01T09:00" id="start"></label>,
+                <label>종료시간<input type="datetime-local" value="2018-01-31T18:00" id="end"></label>
+            </li>
+            <form action="register.php" method="post">
+                <label>메일주소<input type="text"></label>
+                <input type="submit" value="제출">
+                <input type="reset" value="재입력">
+            </form>
+            <form action="register.php" method="post">
+                <label>메일주소<input type="text"></label>
+                <input type="image" src="../images/login.jpg" alt="login">
+                <input type="reset" value="재입력">
+            </form>
+            <li>
+                <input type="button" value="새 탭 열기" onclick="window.open()">
+                <input type="button" value="닫기" onclick="window.close()">
+            </li>
+            <li>
+                <label>첨부파일<input type="file"></label>
+            </li>
+            </ul>
+        </fieldset>
+    </body>
+</html>

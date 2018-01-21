@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>기타 폼 요소들</title>
+    </head>
+    <body>
+        <p><b>button :</b> 기능은 input type="submit"과 같으나 CSS또는 이미지로 버튼을 꾸밀 수 있다.</p>
+        <form>
+            <button type="submit" class="subm">
+                <img src="../images/tick.png" alt=""> 전송하기
+            </button>
+        </form>
+        <hr>
+        <p><b>output :</b>계산의 결과 값 이라는 점을 웹 브라우저가 정확히 인식할 수 있다.</p>
+        <form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+            <input type="number" name="num1" value="0">
+            +<input type="number" name="num2" value="0">
+            =<output name="result" for="num"></output>
+        </form>
+        <hr>
+        <p><b>progress :</b>작업 진행상태 표시</p>
+        <ul>
+            <li>
+                <label>20% remain</label>
+                <progress value="80" max="100"></progress>
+            </li>
+        </ul>
+        <hr>
+        <p><b>meter :</b>값이 차지하는 크기 표시</p>
+        <ul>
+            <li>
+                <label>점유율 0.8</label>
+                <!-- 1을 기준으로 0.8만큼 차지 -->
+                <meter value="0.8"></meter>
+            </li>
+            <li>
+                <label>사용량 64%</label>
+                <!-- 전체 100 중에서 64차지 -->
+                <meter min="0" max="100" value="64"></meter>
+            </li>
+            <li>
+                <label>트래픽 초과</label>
+                <!-- 전체 크기는 1024~10240인데, 높다고 설정한 8192보다 현재 값 9216이 더 크다 -->
+                <meter min="1024" max="10240" low="2048" high="8192" value="9216"></meter>
+                <meter min="1024" max="10240" low="2048" high="8192" value="5000"></meter>
+                <meter min="1024" max="10240" low="2048" high="8192" value="2000"></meter>
+            </li>
+            <li>
+                <label>적절한 트래픽</label>
+                <!-- 전체 1 중에서 현대 0.5를 차지하며 적정도를 0.8로 설정 -->
+                <!-- 높은게 좋은지 낮은게 좋은지에 대한 설정이 가능 -->
+                <meter value="0.5" optimum="0.8"></meter>
+            </li>
+        </ul>
+    </body>
+</html>

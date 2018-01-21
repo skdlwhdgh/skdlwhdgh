@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>인풋 속성</title>
+    </head>
+    <body>
+        <fieldset>
+            <legend>속성</legend>
+            <ul>
+                <li>
+                    <label>autofocus <input type="text" autofocus required> (창 오픈시 커서 자동 포커싱)</label>
+                </li>
+                <li>
+                    <label>placeholder <input type="phone" placeholder="- 없이 입력"> (힌트 제공)</label>
+                </li>
+                <li>
+                    <label>readonly <input type="text" value="종호는 멋쟁이" readonly> (읽기전용)</label>
+                </li>
+                <li>
+                    <form action="register.php" methos="post">
+                    <label>required <input type="text" required></label>
+                    <small style="color:red;">(필수 입력 항목)</small>
+                    <input type="submit" value="전송">
+                    </form>
+                </li>
+            </ul>
+        </fieldset>
+    </body>
+</html>

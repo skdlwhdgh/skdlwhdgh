@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>연습문제</title>
+        <style>
+            ul {
+			list-style:none;
+            }
+            li.first {
+                line-height:50px;
+            }
+            label.first {
+                width:60px;
+                float:left;
+            }
+
+            #container { 
+                width:520px;
+                border:1px solid black;
+                padding:20px 40px;
+                margin:0 auto;
+            }
+            fieldset { margin-bottom:15px; }
+            legend { font-weight:bold; }
+            li.second { line-height:30px;}
+        </style>
+    </head>
+    <body>
+        <form class="first">
+            <h1>1번</h1>
+            <ul>
+                <li>
+                    <label for="r-name" class="first">이름</label>
+                    <input type="text" id="r-name">
+                </li>
+                <li>
+                    <label for="r-phone" class="first">휴대폰</label>
+                    <input type="tel" id="r-phone">
+                </li>
+                <li>
+                    <label for="r-email" class="first">이메일</label>
+                    <input type="email" id="r-email">
+                </li>
+                <li>
+                    <input type="submit" value="예약하기">
+                </li>
+            </ul>
+        </form>
+        <hr>
+        <h2>2번</h2>
+        <div id="container">
+                <h1>프런트엔드 개발자 지원서 </h1>
+                <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+                <hr>
+                <form>
+                    <strong>개인정보</strong>
+                    <ul>
+                        <li>
+                            <label for="name">이름</label>
+                            <input type="text" id="name" placeholder="공백없이 입력하세요">
+                        </li>
+                        <li>
+                            <label for="phone">연락처</label>
+                            <input type="tel" id="phone">
+                        </li>
+                    </ul>
+                    <strong>지원분야</strong>
+                    <ul>
+                        <li>
+                            <label><input type="radio" name="field" value="web">웹 퍼블리싱</label>
+                        </li>
+                        <li>
+                            <label><input type="radio" name="field" value="app">웹 애플리케이션 개발</label>
+                        </li>
+                        <li>
+                            <label><input type="radio" name="field" value="dev">개발 환경 개선</label>
+                        </li>
+                    </ul>
+                    <p><strong>지원 동기</strong></p>
+                    <label>
+                        <textarea cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+                    </label>
+                    <div>
+                        <input type="submit" value="접수하기">
+                        <input type="reset" value="다시쓰기">
+                    </div>
+                </form>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>링크 만들기</title>
+        <!-- 기본 밑줄 및 링크 텍스트 색 삭제 -->
+        <style>
+            a {
+                text-decoration: none;
+                color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="menu"> <!-- anchor를 이용한 현재 페이지 이동 -->
+            <li><a href="#link1">TEXT LINK</a></li>
+            <li><a href="#link2">IMAGE LINK</a></li>
+            <li><a href="#link3">BLANK LINK</a></li>
+            <li><a href="#link4">IFRAME LINK</a></li>
+            <li><a href="#link5">MAP LINK</a></li>
+        </ul>
+        <h1 id="link1">텍스트 링크</h1>
+        <a href="http://www.easyspub.com">이지스퍼블리싱 홈페이지</a>
+        <p><a href="#menu">메뉴로</a></p>
+        <hr>
+        <h1 id="link2">이미지 링크</h1>
+        <a href="http://www.easyspub.com"><img src="../images/easyspub.jpg"></a>
+        <p><a href="#menu">메뉴로</a></p>
+        <hr>
+        <h1 id="link3">새 창에 링크</h1>
+        <a href="http://www.easyspub.com" target="_blank">이지스퍼블리싱 홈페이지</a>
+        <p><a href="#menu">메뉴로</a></p>
+        <hr>
+        <h1 id="link4">iframe 링크</h1>
+        <p>10장에서 자세히 알아보자</p>
+        <iframe src="03_02child.html" width="600" height="400"></iframe>
+        <p><a href="#menu">메뉴로</a></p>
+        <hr>
+        <h1 id="link5">Map 링크</h1>
+        <img src="../images/kids.jpg" alt="" usemap="#favorites">
+        <map name="favorites">
+            <area shape="rect" coords="10, 10, 160, 200" href="http://www.naver.com" target="_blank">
+            <area shape="rect" coords="220, 10, 380, 200" href="http://www.daum.net" target="_blank">
+        <p><a href="#menu">메뉴로</a></p>
+        </map>
+    </body>
+</html>

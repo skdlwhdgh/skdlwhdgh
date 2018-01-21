@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>드롭다운</title>
+    </head>
+    <body>
+        <label class="reg" for="class">select</label>
+        <select id="class">
+            <!-- value : 서버로 넘어가는 값 -->
+            <optgroup label="공과">
+                <option value="1">컴퓨터공학과</option>
+                <option value="2">기계공학과</option>
+                <option value="3">화학공학과</option>
+                <option value="4">전기전자공학과</option>
+                <option value="5">산업공학과</option>
+                <option value="6">건축공학과</option>
+            </optgroup>
+            <optgroup label="인문">
+                <option value="11">사회과</option>
+                <option value="12">어문학부</option>
+                <option value="13">철학</option>
+            </optgroup>
+        </select>
+        <br>
+        <label class="reg" for="interest">datalist</label>
+        <input type="text" id="interest" list="choices">
+        <datalist id="choices">
+            <option value="grammer" label="문법"></option>
+            <option value="voca" label="어휘"></option>
+            <option value="speaking" label="회화"></option>
+        </datalist>
+        <hr>
+        <fieldset>
+            <legend>textarea</legend>
+            <textarea name="intro" cols="60" rows="5">
+                졸립다.
+                그러므로 나는 졸립다.
+                어허엉허엉
+                띠리리리띠리
+                띠에에엑
+                끄
+                ㅌ
+            </textarea>
+        </fieldset>
+    </body>
+</html>
