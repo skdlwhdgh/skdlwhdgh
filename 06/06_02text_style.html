@@ -10,6 +10,31 @@
 
             a { text-decoration: none; }/*중앙선*/
             .lt { text-decoration: line-through; } /*취소선*/
+
+            /* 대소문자 전환 */
+            .trans1 { text-transform:uppercase } /* 대문자 */
+            .trans2 { text-transform: capitalize } /* 첫 글자만 대문자 */
+
+            /* 텍스트 그림자 표시 */
+            .shadow1 {
+                color:orange;
+                text-shadow: 1px 1px #000;
+                font-size: 3em;
+            }
+            .shadow2 {
+                text-shadow: 5px 5px 3px #f00;
+                font-size: 3em;
+            }
+            .shadow3 {
+                color:rgb(66, 9, 223);
+                text-shadow:7px -7px 5px #000;
+                font-size: 3em;
+            }
+            .shadow4 {
+                font-size:3em;
+                color:#000;
+                text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -19px 18px #f20;
+            }
         </style>
     </head>
     <body>
@@ -24,5 +49,15 @@
         <h2 class="blue">토마토</h2>
         <p> [<a href="https://www.google.com" target="_blank">외부 링크</a>]</p>
         <p>토마토는 비타민 A, C가 풍부한 <span class="lt">과일이다.</span>채소다.</p>
+        <hr>
+        <h1>대소문자 전환</h1>
+        <p class="trans1">html (대문자)</p>
+        <p class="trans2">html (첫 글자만 대문자)</p>
+        <hr>
+        <h1>텍스트 그림자</h1>
+        <p class="shadow1">HTML</p>
+        <p class="shadow2">HTML</p>
+        <p class="shadow3">HTML</p>
+        <p class="shadow4">HTML</p>
     </body>
 </html>
