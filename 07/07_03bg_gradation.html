@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>그라데이션 효과 배경</title>
+        <style>
+            .grad_dir {
+                height: 100px;
+                width: 50%;
+                background: blue; /* 그라데이션 미 지원 브라우저용 */
+                background: linear-gradient(to right bottom, blue, white); /* 표준 구문 */
+            }
+            .grad_degree {
+                height: 100px;
+                width: 50%;
+                background: red;
+                background: linear-gradient(45deg, red, white);
+            }
+            .grad_stop {
+                height: 100px;
+                width: 50%;
+                background: black;
+                background: linear-gradient(45deg, black, white 30%, black);
+            }
+            .grad_circle {
+                height: 100px;
+                width: 70px;
+                background: red;
+                background: radial-gradient(white, yellow, red);
+            }
+            .grad_circle2 {
+                height: 100px;
+                width: 70px;
+                background: blue;
+                background: radial-gradient(circle, white, yellow, blue);
+            }
+            .grad_circle_at {
+                height: 100px;
+                width: 70px;
+                background: black;
+                background: radial-gradient(circle at 20% 20%, white, yellow, black);
+            }
+            .grad_circle_closest {
+                height: 200px;
+                width: 200px;
+                background: darkgreen;
+                background: radial-gradient(circle closest-side at 30% 40%, white, yellow, green);
+            }
+            .grad_circle_stop1 {
+                height: 200px;
+                width: 200px;
+                background: skyblue;
+                background: radial-gradient(red, yellow 20%, skyblue);
+            }
+            .grad_repeat {
+                height: 200px;
+                width: 200px;
+                background: black;
+                background: repeating-linear-gradient(red, red 10px, black 30px, black 40px);
+            }
+            .grad_repeat_circle {
+                height: 200px;
+                width: 200px;
+                background: black;
+                background: repeating-radial-gradient(circle, red, red 10px, black 30px, black 40px);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>선형 그라데이션</h1>
+        <h2>방향으로 지정하는 그라데이션(to right bottom)</h2>
+        <div class="grad_dir"></div>
+        <hr>
+        <h2>각도로 지정하는 그라데이션(45deg)</h2>
+        <div class="grad_degree"></div>
+        <hr>
+        <h2>중지점(white 30%)</h2>
+        <div class="grad_stop"></div>
+        <hr>
+        <h1>원형 그라데이션</h1>
+        <h2>모양지정 하지 않은 radial</h2>
+        <div class="grad_circle"></div>
+        <hr>
+        <h2>원 모양을 지정한 radial</h2>
+        <div class="grad_circle2"></div>
+        <hr>
+        <h2>위치 지정</h2>
+        <div class="grad_circle_at"></div>
+        <hr>
+        <h1>크기</h1>
+        <h2>지정 위치에서 가장 가까운 모서리까지 확장</h2>
+        <i>closest-side : 가장 가까운 모서리까지 확장</i><br>
+        <i>closest-corner : 가장 가까운 코너 까지 확장(꼭지점까지)</i><br>
+        <i>farthest-side : 가장 먼 모서리까지 확장</i><br>
+        <i>farthest-corner : 가장 먼 코너까지 확장(default)</i>
+        <div class="grad_circle_closest"></div>
+        <hr>
+        <h2>중지점 지정</h2>
+        <i>red, yellow 20%, skyblue</i>
+        <div class="grad_circle_stop1"></div>
+        <hr>
+        <h1>반복 그라데이션</h1>
+        <div class="grad_repeat"></div>
+        <div class="grad_repeat_circle"></div>
+
+    </body>
+</html>

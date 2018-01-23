@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>배경 스타일</title>
+    <style>
+			body {
+				font-family: "맑은 고딕", 돋움;
+			}
+			.container {
+				width:500px;
+				padding:10px;
+				border:1px solid blue;
+                background: rgba(0, 0, 255, 0.2);
+			}
+			h1 {
+				font-size: 17px;
+			}
+
+			p {
+				font-size: 16px;
+				line-height: 25px;
+			}
+            .container:hover {
+                background: blue;
+                color: white;
+            }
+
+            /* 3번 연습문제 스타일 */
+            .container2 {
+				position: relative;
+				width: 600px;
+				height: 400px;
+				padding: 20px;
+				border: 1px solid #ccc;
+                background: url('../images/apple-bg.jpg') no-repeat;
+                background-size: cover;
+
+			}
+
+			.content2 {
+				position: absolute;
+				top: 300px;
+				width: 90%;
+				padding: 10px;
+                background: rgba(255, 255, 255, 0.5);
+			}
+
+			h1.ex2 {
+				font-size: 30px;
+				text-align: center;
+			}
+
+			p.ex2 {
+				font-size: 16px;
+				line-height: 25px;
+			}
+    </style>
+  </head>
+  <body>
+        <ol>
+            <h1>연습문제</h1>
+            <li>흰색의 상자를 옅은 파랑으로, 테두리를 파랑으로</li>
+            <li>마우스오버시 파란 상자로, 글씨는 흰색으로</li>
+            <div class="container">
+                <h1>웹 디자인 트렌드를 따라잡는 비법 대공개!</h1>
+                <p>그래픽 프로그램으로 웹 디자인 요소를 일일이 만들어 웹사이트를 제작하는 시대는 지났다. 이제 모바일, 태블릿, PC 등 멀티 디바이스에 한 번에 적용할 수 있는 웹 디자인 방법을 알아야 한다. 바로 <b>코딩을 이용한 웹 디자인</b>이다. </p>		
+            </div>
+            <li>사각 영역에 배경이미지를 채우고 텍스트 배경 색 추가</li>
+            <div class="container2">
+                <div class="content2">
+                    <h1 class="ex2">하루 한 알의 사과는 의사를 멀리 한다</h1>
+                </div>
+            </div>
+        </ol>
+  </body>
+</html>
