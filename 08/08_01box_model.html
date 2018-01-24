@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>박스 모델</title>
+        <style>
+            #block img {
+                display: block;
+                margin: 10px;
+            }
+            .inline {
+                display: inline;
+            }
+            #inbl nav, #inbl ul, #inbl li{
+                background: rgba(0, 200, 0, 0.5);
+                display: inline-block;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>inline 속성</h1>
+        <div id="inline">
+            <img src="../images/pic1.jpg">
+            <img src="../images/pic2.jpg">
+            <img src="../images/pic3.jpg">
+        </div>
+        <nav>
+            <ul>
+                <li class="inline"><a href="#">애완견 종류</a></li>
+                <li class="inline"><a href="#">입양하기</a></li>
+                <li class="inline"><a href="#">건강돌보기</a></li>
+                <li class="inline"><a href="#">더불어살기</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h1>block 속성</h1>
+        <div id="block">
+            <img src="../images/pic1.jpg">
+            <img src="../images/pic2.jpg">
+            <img src="../images/pic3.jpg">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">애완견 종류</a></li>
+                <li><a href="#">입양하기</a></li>
+                <li><a href="#">건강돌보기</a></li>
+                <li><a href="#">더불어살기</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <h1>inline-block 속성</h1>
+        <nav id="inbl">
+            <ul>
+                <li><a href="#">애완견 종류</a></li>
+                <li><a href="#">입양하기</a></li>
+                <li><a href="#">건강돌보기</a></li>
+                <li><a href="#">더불어살기</a></li>
+            </ul>
+        </nav>
+    </body>
+</html>>

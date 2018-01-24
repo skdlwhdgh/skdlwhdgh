@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>테두리 관련 속성들</title>
+        <style>
+            #div1 {
+                width: 200px;
+                height: 100px;
+                display: inline-block;
+                margin: 5px;
+                border-width: 5px; /* 테두리 굵기 */
+            }
+            #div2 {
+                width: 200px;
+                height: 100px;
+                display: inline-block;
+                margin: 5px;
+            }
+            #div3 {
+                width: 200px;
+                height: 100px;
+                display: inline-block;
+                margin: 15px;
+                border-style: dashed;
+                border-width: 2px;
+
+            }
+            #div4 { /* round 4 5 6 */
+                width: 200px;
+                height: 150px;
+                display: inline-block;
+                margin: 15px;
+                background: #ffd800;
+                border: 2px solid;
+            }
+            .box1 { border-style: solid; } /* 실선 */
+            .box2 { border-style: dotted; } /* 점선 */
+            .box3 { border-style: dashed; } /* 선으로 된 점선 */
+            .box4 { 
+                border-style: solid;
+                border-width: thick thin;
+            }
+            .box5 {
+                border-style: solid;
+                border-width: 5px 10px 15px 20px;
+            }
+            .box6 { border-color: red; }
+            .box7 { border-color: blue; }
+
+            .h1_1 {
+                padding-bottom: 5px;
+                border-bottom: 3px solid #ccc;
+            }
+            .p_1 {
+                padding: 10px;
+                border: 2px dotted black;
+            }
+            .round1 {
+                width: 200px;
+                height: 150px;
+                display: inline-block;
+                border: 2px solid red;
+                border-radius: 20px;
+            }
+            .round2 {
+                width: 200px;
+                height: 150px;
+                border: 2px solid blue;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                display: inline-block;
+            }
+            .round3 {
+                width: 200px;
+                height: 150px;
+                background: #0c78c8;
+                border-radius: 20px 70px; /* 라운딩 20 70 20 70 */
+                display: inline-block;
+            }
+            #bg {
+                
+                background: url('../images/pic1.jpg') no-repeat;
+                background-size: cover;
+            }
+
+            /* 타원 모서리 */
+            .round4 { border-top-left-radius: 100px 50px; } /* 가로 / 세로 반지름 값 */
+            .round5 { border-bottom-right-radius: 50% 30%; }
+            .round6 { border-top-right-radius: 50px;}
+
+            /* 그림자 */
+            #div_shadow {
+                width: 200px;
+                height: 100px;
+                display: inline-block;
+                margin: 15px;
+                border: 2px solid;
+                border-radius: 20px;
+            }
+            .box_shadow1 {
+                box-shadow: 2px -2px 5px 0px black; /* 수평거리 수직거리 흐림정도 번짐정도 */
+            }
+            .box_shadow2 {
+                box-shadow: 5px 5px 15px 5px gray;
+            }
+            .box_shadow3 {
+                box-shadow: 5px 5px 15px 5px gray inset; /* 안쪽 그림자 */
+            }
+
+            /* 원 */
+            #div_circle {
+                width: 200px;
+                height: 200px;
+                border: 2px solid red;
+                background: yellow;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>테두리의 종류</h2>
+        <div id="div1" class="box1"></div>
+        <div id="div1" class="box2"></div>
+        <div id="div1" class="box3"></div>
+        <hr>
+        <h2>각 테두리 설정</h2>
+        <div id="div2" class="box4"></div>
+        <div id="div2" class="box5"></div>
+        <hr>
+        <h2>테두리 색상</h2>
+        <div id="div3" class="box6"></div>
+        <div id="div3" class="box7"></div>
+        <hr>
+        <h2>각 테두리 설정2</h2>
+        <h1 class="h1_1">박스 모델</h1>
+        <p class="p_1">박스 모델은 실제 콘텐츠 영여그 박스와 영역 사이에 여백인 패딩 ...</p>
+        <hr>
+        <h2>둥근 모서리</h2>
+        <div class="round1"></div>
+        <div id="bg" class="round1"></div>
+        <h2>각 모서리 설정</h2>
+        <div class="round2"></div>
+        <div class="round3"></div>
+        <hr>
+        <h2>타원 모서리</h2>
+        <div id="div4" class="round4"></div>
+        <div id="div4" class="round5"></div>
+        <div id="div4" class="round6"></div>
+        <hr>
+        <h2>그림자</h2>
+        <div id="div_shadow" class="box_shadow1"></div>
+        <div id="div_shadow" class="box_shadow2"></div>
+        <div id="div_shadow" class="box_shadow3"></div>
+        <hr>
+        <h2>둥근 모서리를 이용해 사각을 원처럼 표시(radius 50%)</h2>
+        <div id="div_circle"></div>
+    </body>
+</html>
