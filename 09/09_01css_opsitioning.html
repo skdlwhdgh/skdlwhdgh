@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS 포지셔닝과 주요 속성들</title>
+        <style>
+            .box1 {
+                box-sizing: content-box; /* 콘텐츠 영역 기준으로 width 설정 */
+                width: 300px;
+                height: 150px;
+                margin: 10px;
+                padding: 30px;
+                border: 2px solid red;
+            }
+            .box2 {
+                box-sizing: border-box; /* 전체 영역 기준으로 width 설정 */
+                width: 300px;
+                height: 150px;
+                margin: 10px;
+                padding: 30px;
+                border: 2px solid red;
+            }
+            .left-img {
+                float: left;
+                margin-right: 15px;
+            }
+            .box_float1 {
+                padding: 20px;
+                margin-right: 10px;
+                background: #ffd800;
+                float: left;
+            }
+            .box_float2 {
+                background: #0094ff;
+                padding: 20px;
+                margin-right: 10px;
+                float: left;
+            }
+            .box_float3 {
+                background: #00ff21;
+                padding: 20px;
+                float: left;
+            }
+            .box_float4 {
+                background: #ffffff;
+                padding: 20px;
+                float: right;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>box-sizing</h2>
+        <div class="box1">content-box</div>
+        <div class="box2">border-box</div>
+        <hr>
+        <h2>float: left</h2>
+        <img src="../images/tomato.jpg" class="left-img">
+        <h1>토마토</h1>
+        <p>토마토는 비타민 A, C가 풍부하여 칼륨과 같은 각종 미네랄은 혈액의 산성도를 낮추는 역할을 해주며 혈압을 내리고 혈관을 튼튼하게 해준다.</p>
+        <hr style="clear: left"> <!-- clear: left로 앞서 사용한 float: left를 종료해 준다 -->
+        <h2>float: left, float: right</h2>
+        <div class="box_float1">left</div>
+        <div class="box_float2">left</div>
+        <div class="box_float3">left</div>
+        <div class="box_float4">right</div>
+    </body>
+</html>

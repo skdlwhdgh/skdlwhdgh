@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>표 스타일</title>
+        <style>
+            /* 표 테두리 */
+            .table1_border {
+                border: 1px solid black;
+                width: 300px;
+            }
+            .table1_border td {
+                border: 1px dotted black;
+                padding: 10px;
+                text-align: center;
+            }
+            #collapse {
+                border-collapse: collapse;
+            }
+            #spacing {
+                border-spacing: 20px 10px;
+            }
+            #hide td{
+                empty-cells: hide;
+            }
+            .table_layout {
+                border-collapse: collapse; /* 표 안의 테두리 합침 */
+                width: 200px;
+                table-layout: fixed; /* 셀 너비 고정 */
+                word-break: break-all; /* 셀 너비보다 긴 내용도 셀 안에 표시 */
+                height: auto; /* 높이 값 자동 조절 */
+            }
+            .table_layout td {
+                width: 100px;
+                border: 1px solid black;
+                padding: 5px;
+            }
+            .table_align {
+                border: 1px solid black;
+                width: 200px;
+                padding: 5px;
+                border-spacing: 5px;
+                height: 200px;
+                text-align: center;
+            }
+            .va1 {vertical-align: top;}
+            .va2 {vertical-align: bottom;}
+            .va3 {vertical-align: middle;}
+        </style>
+    </head>
+    <body>
+        <h2>표 테두리(겹치는 부분 분리)</h2>
+        <table class="table1_border">
+            <tr>
+                <td>울산</td>
+                <td>울산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>부산</td>
+                <td>부산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>서울</td>
+                <td>서울 vs 강원</td>
+            </tr>
+        </table>
+        <h2>표 테두리(겹치는 부분 하나로)</h2>
+        <table id="collapse" class="table1_border">
+            <tr>
+                <td>울산</td>
+                <td>울산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>부산</td>
+                <td>부산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>서울</td>
+                <td>서울 vs 강원</td>
+            </tr>
+        </table>
+        <h2>표 테두리(인접한 테두리 거리 조절)</h2>
+        <table id="spacing" class="table1_border">
+            <tr>
+                <td>울산</td>
+                <td>울산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>부산</td>
+                <td>부산 vs 인천</td>
+            </tr>
+            <tr>
+                <td>서울</td>
+                <td>서울 vs 강원</td>
+            </tr>
+        </table>
+        <h2>표 테두리(빈 셀 숨기기)</h2>
+        <table id="hide" class="table1_border">
+            <tr>
+                <td>울산</td>
+                <td>울산 vs 인천</td>
+                <td>TV 중계</td>
+            </tr>
+            <tr>
+                <td>부산</td>
+                <td>부산 vs 인천</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>서울</td>
+                <td>서울 vs 강원</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>테이블 레이아웃</h2>
+        <table border="1" class="table_layout">
+            <tr>
+                <td>한글로띄어쓰기없이길게붙여쓰기</td>
+                <td>long_description_without_space</td>
+            </tr>
+        </table>
+        <h2>수평, 수직 정렬</h2>
+        <table border="1" class="table_align">
+            <tr>
+                <td class="va1">alignment</td>
+                <td class="va2">alignment</td>
+                <td class="va3">alignment</td>
+            </tr>
+        </table>
+    </body>
+
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>position 속성</title>
+        <style>
+            .box_static {
+                position: static; /* 디폴트 값이며 문서의 흐름대로 배치 된다. */
+                float: left;
+                width: 100px;
+                background: #ffd800;
+                margin-right: 10px;
+                padding: 20px;
+            }
+            .box_relative {
+                position: relative; /* 기본적으론 자연스럽게 배치되나 좌표를 지정해 줄수 있다. */
+                left: -50px;
+                top: 30px;
+                width: 300px;
+                background: #0094ff;
+                float: left;
+                padding: 20px;
+                margin-bottom: 50px;
+            }
+
+            /* absolute 속성 : 부모 요소가 relative가 있어야 하면 이녀석을 기준으로 위치를 지정해준다. */
+            #wrap {
+                position: relative;
+                width: 300px;
+                height: 300px;
+                border: 1px solid #ccc;
+            }
+            .box_absolute {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background: #0094ff;
+            }
+            #crd1 {
+                top: 0;
+                left: 0;
+            }
+            #crd2 {
+                top: 0;
+                right: 0;
+            }
+            #crd3 {
+                bottom: 0;
+                left: 0;
+            }
+            #crd4 {
+                bottom: 0;
+                right: 0;
+            }
+            #crd5 {
+                top: 100px;
+                left: 100px;
+            }
+            /* fixed: 부모 요소가 아닌 브라우저 창 기준으로 배치 */
+            #fx {
+                position: fixed;
+                top: 5px;
+                right: 5px;
+                width: 50px;
+                height: 50px;
+                background: #ff6a00;
+            }
+            #content { width: 400px; }
+            .p_1 { line-height: 30px; }
+            /* visiblity : 화면에서 숨기거나 표 등에서 서로 겹치도록 조절한다. */
+            #img_visi {
+                margin: 10px;
+                padding: 5px;
+                border: 1px solid black;
+            }
+            .invisible {
+                visibility: hidden;
+            }
+
+            /* z-index : 요소위에 요소 쌓는 순서 정하기 */
+            #wrapper {
+                position: relative;
+            }
+            #zbox {
+                position: relative;
+                width: 100px;
+                height: 100px;
+            }
+            .zbox1 { z-index: 1; background: red;}
+            .zbox2 { z-index: 3; background: blue; left: 70px; top: -70px;}
+            .zbox3 { z-index: 2; background: yellow; left: 20px; top: -130px;}
+        </style>
+    </head>
+    <body>
+        <h2>static과 relative</h2>
+        <div class="box_static">static</div>
+        <div class="box_relative">relative</div>
+        <hr style="clear: both">
+        <h2>relative안의 absolute 배치하기</h2>
+        <div id="wrap">
+            <div class="box_absolute" id="crd1"></div>
+            <div class="box_absolute" id="crd2"></div>
+            <div class="box_absolute" id="crd3"></div>
+            <div class="box_absolute" id="crd4"></div>
+            <div class="box_absolute" id="crd5"></div>
+        </div>
+        <hr style="clear: both">
+        <h2>브라우저를 기준으로 배치되는 fixed</h2>
+        <div id="fx"></div>
+        <div id="content">
+            <p class="p_1">브라우저 창을 조절하면 주황색 상자로 같이 움직인다.</p>
+        </div>
+        <hr>
+        <h2>visiblity로 중간 상자 숨기기</h2>
+        <img src="../images/pic1.jpg" id="img_visi">
+        <img src="../images/pic2.jpg" class="invisible" id="img_visi">
+        <img src="../images/pic3.jpg" id="img_visi">
+        <hr>
+        <h2>z-index로 요소 쌓는 순서 컨트롤</h2>
+        <div id="wrapper">
+            <div id="zbox" class="zbox1">1</div>
+            <div id="zbox" class="zbox2">3</div>
+            <div id="zbox" class="zbox3">2</div>
+        </div>
+    </body>
+</html>
