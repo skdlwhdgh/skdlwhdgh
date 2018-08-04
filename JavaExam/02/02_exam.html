@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>적정 체중 구하기</title>
+    <script>
+        var strName = prompt("당신의 이름은?");
+        var nHeight = prompt("당신의 키는?");
+        var nWeight = prompt("당신의 몸무게는?");
+
+        var nNormal_w = (nHeight - 100) * 0.9;
+        var result = nWeight >= nNormal_w - 5 && nWeight <= nNormal_w + 5;
+        result = result ? "적정 체중입니다." : "적정 체중이 아닙니다.";
+        document.write(strName + " 님은 " + result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
