@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var inputYear = prompt("D-day 년도 입력");
+        var inputMonth = prompt("D-day 월 입력");
+        var inputDate = prompt("D-day 일 입력");
+        var today = new Date();
+        var nowMonth = today.getMonth() + 1;
+        var nowDate = today.getDate();
+        var nowDay = today.getDay();
+
+        document.write("<h1>오늘 날짜 정보</h1>");
+        document.write("현재 월: " + nowMonth, "<br>");
+        document.write("현재 일: " + nowDate, "<br>");
+        document.write("현재 요일: " + nowDay, "<br>");
+
+        var dDay = new Date(inputYear,inputMonth-1,inputDate);
+        var theMonth = dDay.getMonth() + 1;
+        var theDate = dDay.getDate();
+        var theDay = dDay.getDay();
+        
+
+        document.write("<h1>D-day 날짜 정보</h1>");
+        document.write("D-day 몇 월: " + theMonth, "<br>");
+        document.write("D-day 몇 일: " + theDate, "<br>");
+        document.write("D-day 요일: " + theDay, "<br>");
+
+        if(dDay.getTime() > today.getTime())
+        {
+            var diffDate = dDay.getTime() - today.getTime();
+
+            diffDate = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+            document.write("<h2>D-day까지 " + diffDate + "일 남았습니다.</h2>");
+        }
+        else if(dDay.getTime() < today.getTime())
+        {
+            var diffDate = today.getTime() - dDay.getTime();
+
+            diffDate = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+            document.write("<h2>D-day부터 " + diffDate + "일 지났습니다.</h2>");
+        }
+        else
+        {
+            document.write("<h2>오늘입니다.</h2>");
+        }
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
