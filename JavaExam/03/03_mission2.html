@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var height = prompt("표 만들기 : 행을 입력하세요.","0");
+        var weight = prompt("표 만들기 : 열을 입력하세요.","0");
+        if(0 == height || 0 == weight)
+        {
+            alert("잘못된 입력입니다.");
+        }
+
+        var t = "<table border=1>";
+        var num = 1;
+        for(var i = 0; i < height; ++i)
+        {
+            t+="<tr>";
+            for(var j = 0; j < weight; ++j)
+            {
+                t += "<td>";
+                t += num++;
+                t += "</td>";
+            }
+            t+="</tr>";
+
+        }
+        t +="</table>";
+        console.log(t);
+        document.write(t);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

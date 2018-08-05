@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        while(true)
+        {
+
+            var value = prompt("네이버, 다음, 구글 중 입력해주세요.");
+            var url;
+
+            switch(value)
+            {
+                case "네이버":
+                {
+                    url = "www.naver.com";
+                }
+                break;
+                case "다음":
+                {
+                    url = "www.daum.net";
+                }
+                break;
+                case "구글":
+                {
+                    url = "www.google.com";
+                }
+                break;
+                default:
+                {
+                    alert("잘못된 입력입니다.");
+                    continue;
+                }
+            }
+            break;
+        }
+        if(url)
+        {
+            location.href = "http://" + url;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
