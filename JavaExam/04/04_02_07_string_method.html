@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>문자열 객체 함수</title>
+    <script>
+        var t = "Hello Thank you good luck to you";
+        document.write("<b>예문 : Hello Thank you good luck to you</b><br>");
+        document.write("t.lenth : " + t.length, "<br>");
+    
+        document.write("t.charAt : " + t.charAt(16), "<br>");
+        document.write("t.indexOf(\"you\") : " + t.indexOf("you"), "<br>");
+        document.write("t.indexOf(\"you\", 16) : " + t.indexOf("you", 16), "<br>");
+        document.write("t.lastIndexOf(\"you\") : " + t.lastIndexOf("you"), "<br>");
+        document.write("t.lastIndexOf(\"you\", 25) : " + t.lastIndexOf("you", 25), "<br>");
+        document.write("t.match(\"luck\") : " + t.match("luck"), "<br>");
+        document.write("t.search(\"you\") : " + t.search("you"), "<br>");
+        document.write("t.substr(21, 4) : " + t.substr(21, 4), "<br>");
+        document.write("t.substring(6, 12) : " + t.substring(6, 12), "<br>");
+        document.write("t.replace(\"you\") : " + t.replace("you"), "<br>");
+        document.write("t.toLowerCase() : " + t.toLowerCase(), "<br>");
+        document.write("t.toUpperCase() : " + t.toUpperCase(), "<br>");
+
+        document.write("<hr>");
+        var s = t.split(" ");
+        document.write("var s = t.split(\" \") : 공백을 기준으로 문자 분리 - 배열로 저장되어 s에 할당", "<br>");
+
+        document.write("s[0] : " + s[0], "<br>");
+        document.write("s[4] : " + s[4], "<br>");
+
+        document.write("<hr>");
+        document.write("<b>예문 : var str = \"ABC\"</b><br>");
+        var str = "ABC";
+        var t = str.charCodeAt(0);
+
+        document.write("var t = str.charCodeAt(0) : " + str.charCodeAt(0), "<br>");
+        document.write("String.fromCharCode(65) : " + String.fromCharCode(65), "<br>");
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

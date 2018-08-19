@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>배열 객체 함수</title>
+    <script>
+        var arr_1 = ["사당", "교대", "방배", "강남"];
+        var arr_2 = ["신사", "압구정", "옥수"];
+
+        document.write("var arr_1 = [\"사당\", \"교대\", \"방배\", \"강남\"];<br>");
+        document.write("var arr_2 = [\"신사\", \"압구정\", \"옥수\"];");
+        document.write("<h1>F12 - console로 확인하세요.<h1>");
+        document.write("<h2>1. join : 배열 요소들을 연결<h2>");
+        var result = arr_1.join("-");
+        var nNum = 1;
+        console.log(nNum++);
+        console.log(result);
+
+        document.write("<h2>2. concat : 두개의 배열을 하나로<h2>");
+        result = arr_1.concat(arr_2);
+        console.log(nNum++);
+        console.log(result);
+
+        document.write("<h2>3. slice : 인자값(1) 이전의 인덱스 요소 잘라내기. 남은값 반환.<h2>");
+        result = arr_1.slice(1, 4);
+        console.log(nNum++);
+        console.log(result);
+
+        document.write("<h2>4. sort : 오름차순 정렬</h2>");
+        arr_1.sort();
+        console.log(nNum++);
+        console.log(arr_1);
+
+        document.write("<h2>5. reverse : reverse.</h2>");
+        arr_2.reverse();
+        console.log(nNum++);
+        console.log(arr_2);
+
+        document.write("<hr>");
+
+        var greenArr = ["교대", "방배", "강남"];
+        var yellowArr = ["미금", "정자", "수서"];
+
+        document.write("var greenArr = [\"교대\", \"방배\", \"강남\"];");
+        document.write("var yellowArr = [\"미금\", \"정자\", \"수서\"];");
+
+        document.write("<h2>6. splice : 첫번째인자(2) 로부터 두번째인자개수(1)의 데이터를 삭제. 후 서초 역삼 삽입.</h2>")
+        greenArr.splice(2, 1, "서초", "역삼");
+        console.log(nNum++);
+        console.log(greenArr);
+        
+
+        var data1 = yellowArr.pop();
+        var data2 = yellowArr.shift();
+        document.write("<h2>7. pop, shift : 뒤 및 앞 데이터를 삭제 후 리턴");
+        console.log(nNum++);
+        console.log(yellowArr);
+
+        // document.write("<h2>8. push : shift 한 데이터를 마지막 인덱스에 삽입");
+        // yellowArr.push(data2);
+        // console.log(nNum++);
+        // console.log(yellowArr);
+
+        // document.write("<h2>9. unshift : pop 한 데이터를 가장 앞에 삽입");
+        // yellowArr.unshift(data1);
+        // console.log(nNum++);
+        // console.log(yellowArr);
+
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

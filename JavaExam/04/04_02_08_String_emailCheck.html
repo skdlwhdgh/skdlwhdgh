@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>대충 이메일 주소 형식 검사</title>
+    <script>
+        var userEmail = prompt("당신의 이메일 주소는?");
+        var arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+
+        var check1 = false;
+        var check2 = false;
+
+        if(0 < userEmail.indexOf("@"))
+        {
+            check1 = true;
+        }
+
+        for(var i = 0; i < arrUrl.length; i++)
+        {
+            if(0 < userEmail.indexOf(arrUrl[i]))
+            {
+                check2 = true;
+            }
+        }
+
+        if(true == check1 && true == check2)
+        {
+            document.write(userEmail);
+        }
+        else
+        {
+            alert("이메일 형식이 잘못 되었습니다");
+            location.reload();
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
